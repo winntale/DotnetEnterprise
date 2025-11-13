@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddFilterTests", "OddFilter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddFilterApp", "OddFilterApp\OddFilterApp.csproj", "{FFF36CD7-7C25-4131-8898-902E12C430B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositiveFilterApp", "PositiveFilterApp\PositiveFilterApp.csproj", "{1F94C939-5F67-4C46-A353-DEC7349A744A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositiveFilterTestsApp", "PositiveFilterTestsApp\PositiveFilterTestsApp.csproj", "{E4124F55-3358-4D0F-A4B3-F82BD3502413}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{FFF36CD7-7C25-4131-8898-902E12C430B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFF36CD7-7C25-4131-8898-902E12C430B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFF36CD7-7C25-4131-8898-902E12C430B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F94C939-5F67-4C46-A353-DEC7349A744A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F94C939-5F67-4C46-A353-DEC7349A744A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F94C939-5F67-4C46-A353-DEC7349A744A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F94C939-5F67-4C46-A353-DEC7349A744A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4124F55-3358-4D0F-A4B3-F82BD3502413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4124F55-3358-4D0F-A4B3-F82BD3502413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4124F55-3358-4D0F-A4B3-F82BD3502413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4124F55-3358-4D0F-A4B3-F82BD3502413}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
