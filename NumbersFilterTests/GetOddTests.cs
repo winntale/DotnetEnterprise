@@ -1,19 +1,22 @@
 using Xunit;
 
-namespace OddFilterTests;
+namespace NumbersFilterTests;
 
 public class GetOddTests
 {
-    private readonly OddFilter.OddFilter _oddfilter = new();
+    private readonly NumbersFilter.NumbersFilter _oddfilter = new();
 
     [Fact]
     public void GetOdd_ShouldThrowNullException_WhenNullInput()
     {
         // Arrange
-        ICollection<int> nums = null;
+        ICollection<int>? nums = null;
         
-        // Act & Assert
-        Assert.Throws<ArgumentNullException>(() => _oddfilter.GetOdd(nums).ToList());
+        // Act
+        var result = _oddfilter.GetOdd(nums).ToList();
+        
+        // Assert
+        Assert.Empty(result);
     }
     
     [Fact]

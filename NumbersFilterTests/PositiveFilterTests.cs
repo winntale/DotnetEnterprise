@@ -1,10 +1,10 @@
 ﻿using Xunit;
 
-namespace PositiveFilterTests;
+namespace NumbersFilterTests;
 
 public class PositiveFilterTests
 {
-    private readonly PositiveFilter.PositiveFilter _filter = new();
+    private readonly NumbersFilter.NumbersFilter _filter = new();
     
     [Fact]
     public void GetPositiveNumbers_ShouldReturnEmpty_WhenNullInput()
