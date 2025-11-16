@@ -24,12 +24,7 @@ public class NumbersFilter
 
     public int? GetFirstOddNumber(ICollection<int>? numbers)
     {
-        if (numbers == null)
-        {
-            return null;
-        }
-        
-        var result = numbers.FirstOrDefault(n => n % 2 != 0);
+        var result = numbers?.FirstOrDefault(n => n % 2 != 0);
         
         if (result == 0)
         {
@@ -40,12 +35,7 @@ public class NumbersFilter
 
     public int? GetLastOddNumber(ICollection<int>? numbers)
     {
-        if (numbers == null)
-        {
-            return null;
-        }
-        
-        var result = numbers.LastOrDefault(n => n % 2 != 0);
+        var result = numbers?.LastOrDefault(n => n % 2 != 0);
 
         if (result == 0)
         {
