@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace NumbersFilterTests;
+namespace NumbersFilterTests.tests;
 
 public class PositiveFilterTests
 {

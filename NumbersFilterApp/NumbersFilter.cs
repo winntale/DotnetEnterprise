@@ -22,16 +22,56 @@ public class NumbersFilter
         return nums.Where(n => n > 0).ToList();
     }
 
+    public int? GetFirstOddNumber(ICollection<int>? numbers)
+    {
+        if (numbers == null)
+        {
+            return null;
+        }
+        
+        var result = numbers.FirstOrDefault(n => n % 2 != 0);
+        
+        if (result == 0)
+        {
+            return null;
+        }
+        return result;
+    }
+
+    public int? GetLastOddNumber(ICollection<int>? numbers)
+    {
+        if (numbers == null)
+        {
+            return null;
+        }
+        
+        var result = numbers.LastOrDefault(n => n % 2 != 0);
+
+        if (result == 0)
+        {
+            return null;
+        }
+        return result;
+    }
+
     public static void Main(string[] args)
     {
         NumbersFilter numbersFilter = new();
         
+        // init
+        ICollection<int> numbers = new List<int> { 1, -2, 3, -4, 2, -5, 4, -3, 5 };
+        WriteLine("Initial input: " + string.Join(", ", numbers));
+        
         // odd
-        List<int> nums = new() {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        WriteLine(string.Join(", ", numbersFilter.GetOdd(nums)));
+        WriteLine("Odds: " + string.Join(", ", numbersFilter.GetOdd(numbers)));
         
         // positive
-        ICollection<int> numbers = new List<int> { 1, -2, 3, -4, 2, -6, 4, -8, 1 };
-        WriteLine(string.Join(", ", numbersFilter.GetPositiveNumbers(numbers)));
+        WriteLine("Positive nums: " + string.Join(", ", numbersFilter.GetPositiveNumbers(numbers)));
+        
+        // first odd
+        WriteLine("First odd: " + numbersFilter.GetFirstOddNumber(numbers));
+        
+        // last odd
+        WriteLine("Last odd: " + numbersFilter.GetLastOddNumber(numbers));
     }
 }

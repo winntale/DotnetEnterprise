@@ -1,13 +1,13 @@
 using Xunit;
 
-namespace NumbersFilterTests;
+namespace NumbersFilterTests.tests;
 
 public class GetOddTests
 {
     private readonly NumbersFilter.NumbersFilter _oddfilter = new();
 
     [Fact]
-    public void GetOdd_ShouldThrowNullException_WhenNullInput()
+    public void GetOdd_ShouldReturnEmpty_WhenNullInput()
     {
         // Arrange
         ICollection<int>? nums = null;
