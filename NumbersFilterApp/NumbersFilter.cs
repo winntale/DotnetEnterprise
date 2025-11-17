@@ -44,6 +44,11 @@ public class NumbersFilter
         return result;
     }
 
+    public int? GetSingleOddNumber(ICollection<int>? numbers)
+    {
+        return numbers?.SingleOrDefault(n => n % 2 != 0);
+    }
+
     public static void Main(string[] args)
     {
         NumbersFilter numbersFilter = new();
@@ -63,5 +68,8 @@ public class NumbersFilter
         
         // last odd
         WriteLine("Last odd: " + numbersFilter.GetLastOddNumber(numbers));
+        
+        // single odd
+        WriteLine("Single odd: " + numbersFilter.GetSingleOddNumber(numbers));
     }
 }
