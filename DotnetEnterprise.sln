@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersFilterTests", "NumbersFilterTests\NumbersFilterTests.csproj", "{C500048D-97DB-4792-A33A-DBC9DCDF5D32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersTests", "FiltersTests\FiltersTests.csproj", "{C500048D-97DB-4792-A33A-DBC9DCDF5D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersFilterApp", "NumbersFilterApp\NumbersFilterApp.csproj", "{FFF36CD7-7C25-4131-8898-902E12C430B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersApp", "FiltersApp\FiltersApp.csproj", "{FFF36CD7-7C25-4131-8898-902E12C430B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

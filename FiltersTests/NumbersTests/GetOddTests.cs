@@ -1,10 +1,10 @@
 using Xunit;
 
-namespace NumbersFilterTests.tests;
+namespace NumbersFilterTests.NumbersTests;
 
 public class GetOddTests
 {
-    private readonly NumbersFilter.NumbersFilter _oddfilter = new();
+    private readonly FiltersApp.NumbersFilter _oddfilter = new();
 
     [Fact]
     public void GetOdd_ShouldReturnEmpty_WhenNullInput()

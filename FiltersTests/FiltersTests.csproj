@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\NumbersFilterApp\NumbersFilterApp.csproj" />
+        <ProjectReference Include="..\FiltersApp\FiltersApp.csproj" />
         
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
         <PackageReference Include="xunit" Version="2.9.3" />

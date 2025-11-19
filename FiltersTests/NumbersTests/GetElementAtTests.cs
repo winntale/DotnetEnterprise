@@ -1,11 +1,11 @@
 using System.Collections.ObjectModel;
 using Xunit;
 
-namespace NumbersFilterTests.tests;
+namespace NumbersFilterTests.NumbersTests;
 
 public class GetElementAtTests
 {
-    private readonly NumbersFilter.NumbersFilter _filter = new();
+    private readonly FiltersApp.NumbersFilter _filter = new();
 
     [Fact]
     public void GetElementAt_ShouldReturnNull_WhenNullInput()

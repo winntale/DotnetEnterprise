@@ -1,6 +1,6 @@
 using static System.Console;
 
-namespace NumbersFilter;
+namespace FiltersApp;
 
 public class NumbersFilter
 {
@@ -52,32 +52,5 @@ public class NumbersFilter
     public int? GetElementAtOrDefault(ICollection<int>? collection, int index)
     {
         return collection?.ElementAtOrDefault(index);
-    }
-
-    public static void Main(string[] args)
-    {
-        NumbersFilter numbersFilter = new();
-        
-        // init
-        ICollection<int> numbers = new List<int> { 1, -2, 3, -4, 2, -5, 4, -3, 5 };
-        WriteLine("Initial input: " + string.Join(", ", numbers));
-        
-        // odd
-        WriteLine("Odds: " + string.Join(", ", numbersFilter.GetOdd(numbers)));
-        
-        // positive
-        WriteLine("Positive nums: " + string.Join(", ", numbersFilter.GetPositiveNumbers(numbers)));
-        
-        // first odd
-        WriteLine("First odd: " + numbersFilter.GetFirstOddNumber(numbers));
-        
-        // last odd
-        WriteLine("Last odd: " + numbersFilter.GetLastOddNumber(numbers));
-        
-        // single odd (exception occurs)
-        //WriteLine("Single odd: " + numbersFilter.GetSingleOddNumber(numbers));
-        
-        // element at index
-        WriteLine("Element at index 1: " + numbersFilter.GetElementAtOrDefault(numbers, 1));
     }
 }
