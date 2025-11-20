@@ -57,7 +57,7 @@ public class SelectUsersTests
         // Arrange
         IList<User> users = new List<User>
         {
-            new() { Id = Guid.NewGuid(), Name = "Aleksey", Age = 21 },
+            new() { Id = Guid.NewGuid(), Name = "Aleksey", Age = 23 },
             new() { Id = Guid.NewGuid(), Name = "Robert", Age = 43 },
             new() { Id = Guid.NewGuid(), Name = "Elena", Age = 17 },
             new() { Id = Guid.NewGuid(), Name = "Anna", Age = 18 },
@@ -65,7 +65,7 @@ public class SelectUsersTests
             new() { Id = Guid.NewGuid(), Name = "Vladislav", Age = 30 }
         };
 
-        IList<User> expectingUsers = new List<User> { users[1], users[5], users[4], users[0] };
+        IList<User> expectingUsers = new List<User> { users[0], users[4], users[5], users[1] };
 
         // Act
         var result = _filterUsers.SelectUsers(users, 18);
