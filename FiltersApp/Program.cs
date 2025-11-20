@@ -46,5 +46,8 @@ public static class Program
         
         // user ids for users which age is more than an `age` parameter
         WriteLine("Ids of users that older than 20: " + string.Join(", ", usersFilter.SelectUserIds(users, 20)));
+        
+        // users that age is more than an `age` parameter, sorted descending by age
+        WriteLine("Sorted by age users that older than 20: " + string.Join(", ", usersFilter.SelectUsers(users, 20)));
     }
 }

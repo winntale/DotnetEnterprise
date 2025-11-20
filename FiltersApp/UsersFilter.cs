@@ -12,4 +12,16 @@ public class UsersFilter
         }
         return users.Where(user => user.Age > age).Select(user => user.Id).ToList();
     }
+
+    public ICollection<User> SelectUsers(ICollection<User>? users, int age)
+    {
+        if (users == null)
+        {
+            return [];
+        }
+        return users
+            .Where(user => user.Age > age)
+            .OrderByDescending(user => user.Age)
+            .ToList();
+    }
 }
