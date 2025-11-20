@@ -21,7 +21,8 @@ public class UsersFilter
         }
         return users
             .Where(user => user.Age > age)
-            .OrderByDescending(user => user.Age)
+            .OrderBy(user => user.Age)
+            .ThenBy(user => user.Name)
             .ToList();
     }
 }
