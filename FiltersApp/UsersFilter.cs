@@ -25,4 +25,17 @@ public class UsersFilter
             .ThenBy(user => user.Name)
             .ToList();
     }
+    
+    public ICollection<User> DescendingAgeUsers(ICollection<User>? users, int age)
+    {
+        if (users == null)
+        {
+            return [];
+        }
+        return users
+            .Where(user => user.Age > age)
+            .OrderByDescending(user => user.Age)
+            .ThenBy(user => user.Name)
+            .ToList();
+    }
 }
