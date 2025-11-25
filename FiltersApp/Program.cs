@@ -49,5 +49,10 @@ public static class Program
         
         // users that age is more than an `age` parameter, sorted descending by age
         WriteLine("Sorted by age users that older than 20: " + string.Join(", ", usersFilter.SelectUsers(users, 20)));
+
+        // 2nd page of users, taken by 2 elements which
+        var paginateUsers = usersFilter.GetPaginateUsers(users, 1, 2);
+        WriteLine("Paginate: " + string.Join(", ", paginateUsers.CurrentPageUsers)
+                               + " total count: " + paginateUsers.TotalCount);
     }
 }

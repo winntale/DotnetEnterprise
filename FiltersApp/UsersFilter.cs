@@ -50,4 +50,26 @@ public class UsersFilter
             .SelectMany(user => user.Projects ?? Enumerable.Empty<Project>())
             .ToList();
     }
+
+    public Paginate<User> GetPaginateUsers(ICollection<User> users, int? skip, int? take)
+    {
+        var totalUsersCount = users.Count;
+        var skipVal = skip ?? 0;
+        var takeVal = take ?? 10;
+        
+        if (skipVal >= totalUsersCount || takeVal <= 0)
+        {
+            return new Paginate<User> { CurrentPageUsers = [], TotalCount = totalUsersCount };
+        }
+        
+        var startIndex = skipVal * takeVal;
+        var endIndex = startIndex + takeVal;
+        
+        var currentPageUsers = users
+            .Skip(startIndex)
+            .Take(endIndex)
+            .ToList();
+        
+        return new Paginate<User> { CurrentPageUsers = currentPageUsers, TotalCount = totalUsersCount };
+    }
 }
