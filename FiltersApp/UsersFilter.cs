@@ -63,11 +63,10 @@ public class UsersFilter
         }
         
         var startIndex = skipVal * takeVal;
-        var endIndex = startIndex + takeVal;
         
         var currentPageUsers = users
             .Skip(startIndex)
-            .Take(endIndex)
+            .Take(takeVal)
             .ToList();
         
         return new Paginate<User> { CurrentPageUsers = currentPageUsers, TotalCount = totalUsersCount };
