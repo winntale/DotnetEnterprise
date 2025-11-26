@@ -71,4 +71,15 @@ public class UsersFilter
         
         return new Paginate<User> { CurrentPageUsers = currentPageUsers, TotalCount = totalUsersCount };
     }
+
+    public ICollection<int> ReverseUserIds(ICollection<int>? userIds)
+    {
+        if (userIds == null)
+        {
+            return [];
+        }
+        return userIds
+            .Reverse()
+            .ToList();
+    }
 }

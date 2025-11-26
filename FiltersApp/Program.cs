@@ -54,5 +54,9 @@ public static class Program
         var paginateUsers = usersFilter.GetPaginateUsers(users, 1, 2);
         WriteLine("Paginate: " + string.Join(", ", paginateUsers.CurrentPageUsers)
                                + " total count: " + paginateUsers.TotalCount);
+        
+        // reversed ids
+        var userIds = new List<int> { 1, 2, 3, 4, 5 };
+        WriteLine("Input users: " + string.Join(", ", usersFilter.ReverseUserIds(userIds)));
     }
 }
