@@ -82,4 +82,38 @@ public class UsersFilter
             .Reverse()
             .ToList();
     }
+
+    public bool AllAdultUsers(ICollection<User>? users)
+    {
+        if (users == null)
+        {
+            return false;
+        }
+
+        return users
+            .All(user => user.Age >= 18);
+    }
+
+    public bool AnyAdultUsers(ICollection<User>? users)
+    {
+        if (users == null)
+        {
+            return false;
+        }
+
+        return users
+            .Any(user => user.Age >= 18);
+    }
+
+    public bool ContainsAdultUser(ICollection<User>? users)
+    {
+        if (users == null)
+        {
+            return false;
+        }
+        
+        return users
+            .Select(user => user.Age)
+            .Contains(18);
+    }
 }
