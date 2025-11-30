@@ -58,5 +58,12 @@ public static class Program
         // reversed ids
         var userIds = new List<int> { 1, 2, 3, 4, 5 };
         WriteLine("Input users: " + string.Join(", ", usersFilter.ReverseUserIds(userIds)));
+        
+        
+        // CONVERSIONS BLOCK
+        Conversions conversions = new();
+        
+        var list = new List<int> { 1, 2, 3, 4, 5 };
+        WriteLine("List of longs: " + string.Join(", ", conversions.CastIntToLong(list)));
     }
 }
