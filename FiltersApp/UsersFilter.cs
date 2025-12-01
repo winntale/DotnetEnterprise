@@ -116,4 +116,14 @@ public class UsersFilter
             .Select(user => user.Age)
             .Contains(18);
     }
+
+    public Dictionary<int, List<User>> GroupUsersByAge(ICollection<User> users)
+    {
+        return users
+            .GroupBy(u => u.Age)
+            .ToDictionary(
+                grouping => grouping.Key,
+                grouping => grouping.ToList()
+            );
+    }
 }
