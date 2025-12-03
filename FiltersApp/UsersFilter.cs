@@ -126,4 +126,12 @@ public class UsersFilter
                 grouping => grouping.ToList()
             );
     }
+
+    public ICollection<User> DistinctByIdUsers(ICollection<User> users)
+    {
+        return users
+            .DistinctBy(u => u.Id)
+            .ToList();
+    }
+    
 }
