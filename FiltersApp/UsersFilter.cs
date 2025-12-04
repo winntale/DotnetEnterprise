@@ -133,5 +133,13 @@ public class UsersFilter
             .DistinctBy(u => u.Id)
             .ToList();
     }
-    
+
+    public ICollection<User> FindUsersWithSameName(ICollection<User> firstGroup, ICollection<User> secondGroup)
+    {
+        return firstGroup
+            .IntersectBy(
+                secondGroup.Select(u => u.Name),
+                u => u.Name
+            ).ToList();
+    }
 }
