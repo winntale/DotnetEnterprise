@@ -142,4 +142,17 @@ public class UsersFilter
                 u => u.Name
             ).ToList();
     }
+
+    public Dictionary<int, User> GroupByAgeUsingDictionary(ICollection<User> users)
+    {
+        return users.ToDictionary(
+            u => u.Age,
+            u => u);
+    }
+
+    public ILookup<int, User> GroupByAgeUsingLookup(ICollection<User> users)
+    {
+        return users.ToLookup(u => u.Age);
+    }
+
 }
