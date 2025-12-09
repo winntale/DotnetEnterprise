@@ -11,7 +11,7 @@ public class GroupingTests
     private static readonly User[] UsersWithDuplicates = new[]
     {
         new User { Id = Guid.NewGuid(), Age = 25, Name = "Alice" },
-        new User { Id = Guid.NewGuid(), Age = 25, Name = "Bob" }, // Дубликат!
+        new User { Id = Guid.NewGuid(), Age = 25, Name = "Bob" },
         new User { Id = Guid.NewGuid(), Age = 30, Name = "Charlie" }
     };
 
