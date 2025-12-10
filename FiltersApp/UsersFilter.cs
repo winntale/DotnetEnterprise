@@ -154,5 +154,10 @@ public class UsersFilter
     {
         return users.ToLookup(u => u.Age);
     }
+    
+    public HashSet<User> UniqueUsers(ICollection<User> users)
+    {
+        return users.ToHashSet();
+    }
 
 }
