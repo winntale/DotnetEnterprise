@@ -160,4 +160,30 @@ public class UsersFilter
         return users.ToHashSet();
     }
 
+    public ICollection<User> AddUserAtEnd(
+        ICollection<User> users,
+        User newUser)
+    {
+        return users
+            .Append(newUser)
+            .ToList();
+    }
+
+    public ICollection<User> MergeUserCollections(
+        ICollection<User> firstGroup,
+        ICollection<User> secondGroup)
+    {
+        return firstGroup
+            .Concat(secondGroup)
+            .ToList();
+    }
+
+    public ICollection<User> AddUserAtBeginning(
+        ICollection<User> users,
+        User newUser)
+    {
+        return users
+            .Prepend(newUser)
+            .ToList();
+    }
 }
