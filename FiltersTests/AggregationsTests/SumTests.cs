@@ -41,8 +41,11 @@ public class ArrayCalculatorTests
         // Arrange
         int[] values = [];
 
-        // Act & Assert
-        Assert.Throws<InvalidOperationException>(() => _calculator.SumCalculate(values));
+        // Act
+        var result = _calculator.SumCalculate(values);
+        
+        // Assert
+        Assert.Equal(0, result);
     }
 
     [Fact]
