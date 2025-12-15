@@ -1,5 +1,8 @@
+using System.Runtime.CompilerServices;
 using static System.Console;
 using FiltersApp.Models;
+
+[assembly: InternalsVisibleTo("FiltersTests")]
 
 namespace FiltersApp;
 

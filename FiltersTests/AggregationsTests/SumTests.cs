@@ -2,11 +2,12 @@ using System;
 using FiltersApp;
 using Xunit;
 
+
 namespace NumbersFilterTests.AggregationsTests;
 
 public class ArrayCalculatorTests
 {
-    private readonly Aggregations.SumService _calculator = new();
+    private readonly SumService _calculator = new();
 
     [Fact]
     public void SumCalculate_ShouldReturnSumCalculate_ForPositiveNumbers()
