@@ -2,15 +2,13 @@ using FiltersApp.Models;
 
 namespace FiltersApp.Comparers.Users;
 
-internal sealed class UserListComparerService
+internal sealed class UserClassListComparerService
 {
-    public bool AreSequencesEqual(ICollection<User>? firstList, ICollection<User>? secondList)
+    public bool AreSequencesEqual(ICollection<UserClass>? firstList, ICollection<UserClass>? secondList)
     {
         var first = firstList ?? [];
         var second = secondList ?? [];
 
-        var d1 = DateTime.Now;
-        
         return first.SequenceEqual(second);
     }
 }
